@@ -1,20 +1,15 @@
-import { Text, View, StyleSheet } from 'react-native';
-import { multiply } from 'react-native-dropdown';
+import { Dropdown, DropdownProvider } from 'react-native-dropdown';
 
-const result = multiply(3, 7);
+<DropdownProvider
+  theme={{
+    typography: { fontFamily: 'Inter_Regular' },
+    colors: { primary: '#4F46E5' },
+    strings: {
+      noOptions: 'Koi option nahi mila',
+    },
+  }}
+>
+  <Dropdown />
+</DropdownProvider>
 
-export default function App() {
-  return (
-    <View style={styles.container}>
-      <Text>Result: {result}</Text>
-    </View>
-  );
-}
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
+// const text = props.placeholder ?? defaultStrings.placeholder;

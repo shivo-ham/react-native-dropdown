@@ -1,16 +1,35 @@
 {
   "compilerOptions": {
     "rootDir": ".",
+    "baseUrl": "./src",
+    "ignoreDeprecations": "6.0",
     "paths": {
-      "react-native-dropdown": ["./src/index"]
+      "@/*": ["*"],
+      "@dropdown/*": [
+        "dropdown/*"
+      ],
+      "@constants": ["constants/index.ts"],
+      "@hooks/*": [
+        "hooks/*"
+      ],
+      "@overlay/*": [
+        "overlay/*"
+      ],
+      "@utils/*": [
+        "utils/*"
+      ]
     },
     "allowUnreachableCode": false,
     "allowUnusedLabels": false,
-    "customConditions": ["react-native-strict-api"],
+    "customConditions": [
+      "react-native-strict-api"
+    ],
     "esModuleInterop": true,
     "forceConsistentCasingInFileNames": true,
     "jsx": "react-jsx",
-    "lib": ["ESNext"],
+    "lib": [
+      "ESNext"
+    ],
     "module": "ESNext",
     "moduleResolution": "bundler",
     "noEmit": true,
