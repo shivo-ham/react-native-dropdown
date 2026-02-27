@@ -1,4 +1,5 @@
-import type { TextStyle, ViewStyle } from "react-native";
+import React from 'react';
+import type { TextStyle, ViewStyle } from 'react-native';
 
 /* ======================================================
    Public Props for Dropdown Component
@@ -12,7 +13,7 @@ export interface DropdownProps<T> {
   onChangeValue?: (item: T | T[]) => void;
 
   /* ---------- Field Mapping ---------- */
-  placeholder?: string
+  placeholder?: string;
   labelField?: keyof T;
   valueField?: keyof T;
   descriptionField?: keyof T;
@@ -25,7 +26,7 @@ export interface DropdownProps<T> {
   /* ---------- Tooltip ---------- */
   toolTipMessage?: string;
   toolTipIcon?: React.ReactNode;
-  toolTipPosition?: "top" | "bottom" | "left" | "right";
+  toolTipPosition?: 'top' | 'bottom' | 'left' | 'right';
   toolTipBackgroundColor?: string;
   toolTipTextColor?: string;
   toolTipTextStyle?: TextStyle;
@@ -52,7 +53,7 @@ export interface DropdownProps<T> {
 
   /* ---------- Dropdown Behavior ---------- */
   onToggle?: (open: boolean) => void;
-  dropdownVariant?: "outlined" | "filled" | "underlined";
+  dropdownVariant?: 'outlined' | 'filled' | 'underlined';
 
   /* ---------- Icons ---------- */
   leadingIcon?: React.ReactNode;
@@ -73,45 +74,42 @@ export interface DropdownProps<T> {
   accessibilityLabel?: string;
 }
 
-
-interface DropdownItem {
-     label?: string
-     labelField?: string; // for custom value rendering using valueField in data
-     value?: string | number
-     valueField?: string; // for custom value rendering using valueField in data
-     description?: string
-
-     itemLabelStyle?: TextStyle
-     itemDescriptionStyle?: TextStyle
-     disabled?: boolean
-}
-
 export type DropdownLabelProps<T> = Pick<
   DropdownProps<T>,
-  "label" | "labelStyle" | "required" | "disabled"
+  'label' | 'labelStyle' | 'required' | 'disabled'
 >;
 
 export type DropdownTooltipProps<T> = Pick<
   DropdownProps<T>,
-  | "toolTipMessage"
-  | "toolTipIcon"
-  | "toolTipPosition"
-  | "toolTipBackgroundColor"
-  | "toolTipTextColor"
-  | "toolTipTextStyle"
-  | "toolTipIconStyle"
+  | 'toolTipMessage'
+  | 'toolTipIcon'
+  | 'toolTipPosition'
+  | 'toolTipBackgroundColor'
+  | 'toolTipTextColor'
+  | 'toolTipTextStyle'
+  | 'toolTipIconStyle'
+>;
+
+export type DropdownEndAdornmentProps<T> = Pick<
+  DropdownProps<T>,
+  'trailingIcon'
+>;
+
+export type DropdownStartAdornmentProps<T> = Pick<
+  DropdownProps<T>,
+  'leadingIcon'
 >;
 
 export type DropdownTriggerProps<T> = Pick<
   DropdownProps<T>,
-  | "value"
-  | "placeholder"
-  | "disabled"
-  | "loading"
-  | "dropdownVariant"
-  | "leadingIcon"
-  | "trailingIcon"
-  | "renderTrigger"
+  | 'value'
+  | 'placeholder'
+  | 'disabled'
+  | 'loading'
+  | 'dropdownVariant'
+  | 'leadingIcon'
+  | 'trailingIcon'
+  | 'renderTrigger'
 > & {
   open: boolean;
   onPress: () => void;
@@ -119,7 +117,7 @@ export type DropdownTriggerProps<T> = Pick<
 
 export type DropdownHelperTextProps<T> = Pick<
   DropdownProps<T>,
-  "helperText" | "errorText" | "successText" | "helperTextStyle"
+  'helperText' | 'errorText' | 'successText' | 'helperTextStyle'
 >;
 
 export interface DropdownListItemProps<T> {
@@ -134,4 +132,3 @@ export interface DropdownListItemProps<T> {
   itemLabelStyle?: TextStyle;
   itemDescriptionStyle?: TextStyle;
 }
-

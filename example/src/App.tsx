@@ -1,10 +1,10 @@
-import { View, Text } from 'react-native'
-import { Dropdown, DropdownProvider } from '../../src';
+import { View } from 'react-native'
+import { Dropdown } from '../../src/dropdown';
 
 export default function App() {
   return (
     <View style={{flex:1,alignItems:'center',  marginTop:20}}>
-      <Dropdown label="Select an option" disabled={false} />
+      <Dropdown data={[]} label="Select an option" disabled={false} />
     </View>
   )
 }

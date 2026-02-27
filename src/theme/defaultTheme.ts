@@ -1,5 +1,5 @@
-import type { DropdownTheme } from "./theme.types";
-import { colors, spacing, } from "@constants";
+import type { DropdownTheme } from './theme.types';
+import { colors, spacing } from '@constants';
 
 export const defaultTheme: DropdownTheme = {
   typography: {
@@ -7,5 +7,5 @@ export const defaultTheme: DropdownTheme = {
     fontSize: 14,
   },
   colors,
-  spacing
+  spacing,
 };

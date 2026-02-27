@@ -8,7 +8,7 @@ module.exports = {
         extensions: ['.ts', '.tsx'],
         alias: {
           '@': './src',
-          '@dropdown': './src/dropdown',
+          '@internal': './src/internal',
           '@constants': './src/constants',
           '@hooks': './src/hooks',
           '@overlay': './src/overlay',
@@ -17,4 +17,4 @@ module.exports = {
       },
     ],
   ],
-}
+};

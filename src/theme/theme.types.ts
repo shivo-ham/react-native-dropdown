@@ -1,4 +1,4 @@
-import type { TextStyle } from "react-native";
+import type { TextStyle } from 'react-native';
 
 export interface DropdownTypography {
   fontFamily?: TextStyle['fontFamily'];
@@ -15,7 +15,7 @@ export interface DropdownColors {
 }
 
 export interface DropdownSpacing {
-  0?: number; 
+  0?: number;
   4?: number;
   8?: number;
   12?: number;

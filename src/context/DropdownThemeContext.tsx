@@ -2,7 +2,9 @@ import React, { createContext, useContext } from 'react';
 import { defaultTheme } from './defaultTheme';
 import type { DropdownTheme } from './theme.types';
 
-const DropdownThemeContext = createContext<DropdownTheme | undefined>(undefined);
+const DropdownThemeContext = createContext<DropdownTheme | undefined>(
+  undefined
+);
 
 interface DropdownProviderProps {
   theme?: DropdownTheme;

@@ -40,7 +40,8 @@
     "lint": "eslint . --ext .js,.jsx,.ts,.tsx",
     "lint:fix": "eslint . --ext .js,.jsx,.ts,.tsx --fix",
     "format": "prettier --write .",
-    "format:check": "prettier --check .",
+    "format:check": "prettier --check src",
+    "format:check:all": "prettier --check .",
     "test": "jest --passWithNoTests",
     "release": "release-it --only-version",
     "prepare": "husky install"
