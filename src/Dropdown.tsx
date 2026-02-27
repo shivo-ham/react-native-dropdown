@@ -1,14 +1,29 @@
 import { Text, View } from 'react-native';
+import {DropdownLabel, DropdownTrigger } from '@dropdown'
 import { useDropdownTheme } from './theme/DropdownThemeContext';
+import type { DropdownProps } from './Dropdown.types';
 
-const Dropdown = () => {
+const Dropdown = ({ label, disabled }: DropdownProps) => {
   const theme = useDropdownTheme();
 
   return (
-    <View
+    <View>
+      <DropdownLabel 
+        label={label}
+        disabled={disabled}
+      />
+      <DropdownTrigger/> 
+    </View>
+  );
+};
+
+export default Dropdown;
+
+
+{/* <View
       style={{
         backgroundColor: theme.colors?.background,
-        padding: theme.spacing?.md,
+        padding: theme.spacing?.[12],
       }}
     >
       <Text
@@ -21,8 +36,4 @@ const Dropdown = () => {
       >
         Dropdown
       </Text>
-    </View>
-  );
-};
-
-export default Dropdown;
+    </View> */}

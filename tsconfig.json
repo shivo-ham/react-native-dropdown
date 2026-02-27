@@ -5,9 +5,8 @@
     "ignoreDeprecations": "6.0",
     "paths": {
       "@/*": ["*"],
-      "@dropdown/*": [
-        "dropdown/*"
-      ],
+      "@dropdown": [
+        "dropdown/index.ts"],
       "@constants": ["constants/index.ts"],
       "@hooks/*": [
         "hooks/*"
