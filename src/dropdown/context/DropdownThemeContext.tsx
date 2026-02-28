@@ -1,6 +1,6 @@
 import React, { createContext, useContext } from 'react';
-import { defaultTheme } from './defaultTheme';
-import type { DropdownTheme } from './theme.types';
+import { defaultTheme } from '@/theme/defaultTheme';
+import type { DropdownTheme } from '@/theme/theme.types';
 
 const DropdownThemeContext = createContext<DropdownTheme | undefined>(
   undefined

@@ -1,14 +1,16 @@
 import { View } from 'react-native';
-import { DropdownLabel } from '@/internal';
-// import { useDropdownTheme } from './theme/DropdownThemeContext';
+import DropdownPortal from './overlay/DropdownPortal';
 import type { DropdownProps } from './Dropdown.types';
+import DropdownTrigger from './trigger';
 
-const Dropdown = <T,>({ label, disabled }: DropdownProps<T>) => {
-  // const theme = useDropdownTheme();
-
+const Dropdown = <T,>({ disabled }: DropdownProps<T>) => {
   return (
     <View>
-      <DropdownLabel label={label} disabled={disabled} />
+      {/* Trigger */}
+      <DropdownTrigger disabled={disabled} />
+
+      {/* Overlay */}
+      <DropdownPortal />
     </View>
   );
 };

@@ -1,2 +1,2 @@
-export { DropdownProvider } from '../context/DropdownThemeContext';
+export { DropdownProvider } from '../dropdown/context/DropdownThemeContext';
 export { default as Dropdown } from './Dropdown';

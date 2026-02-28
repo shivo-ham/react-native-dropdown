@@ -8,10 +8,9 @@ module.exports = {
         extensions: ['.ts', '.tsx'],
         alias: {
           '@': './src',
-          '@internal': './src/internal',
+
+          '@theme': './src/theme',
           '@constants': './src/constants',
-          '@hooks': './src/hooks',
-          '@overlay': './src/overlay',
           '@utils': './src/utils',
         },
       },

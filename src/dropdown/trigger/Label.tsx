@@ -1,5 +1,5 @@
-import type { DropdownLabelProps } from '@/dropdown/Dropdown.types';
 import { Text, View } from 'react-native';
+import type { DropdownLabelProps } from '../Dropdown.types';
 
 const DropdownLabel = <T,>({
   label,

@@ -1,5 +1,5 @@
-import type { DropdownHelperTextProps } from '@/dropdown/Dropdown.types';
 import { Text, View } from 'react-native';
+import type { DropdownHelperTextProps } from '../Dropdown.types';
 
 const DropdownHelperText = <T,>({ helperText }: DropdownHelperTextProps<T>) => {
   return (

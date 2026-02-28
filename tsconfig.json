@@ -5,10 +5,14 @@
     "ignoreDeprecations": "6.0",
     "paths": {
       "@/*": ["*"],
-      "@internal": ["internal/index.ts"],
-      "@constants": ["constants/index.ts"],
-      "@hooks/*": ["hooks/*"],
-      "@overlay/*": ["overlay/*"],
+
+      "@theme": ["theme"],
+      "@theme/*": ["theme/*"],
+
+      "@constants": ["constants"],
+      "@constants/*": ["constants/*"],
+
+      "@utils": ["utils"],
       "@utils/*": ["utils/*"]
     },
     "allowUnreachableCode": false,

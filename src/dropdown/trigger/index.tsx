@@ -1,5 +1,5 @@
-import type { DropdownTriggerProps } from '@/dropdown/Dropdown.types';
 import { Text, View } from 'react-native';
+import type { DropdownTriggerProps } from '../Dropdown.types';
 
 const DropdownTrigger = <T,>({ placeholder }: DropdownTriggerProps<T>) => {
   return (

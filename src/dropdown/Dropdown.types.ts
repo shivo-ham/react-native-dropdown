@@ -90,15 +90,12 @@ export type DropdownTooltipProps<T> = Pick<
   | 'toolTipIconStyle'
 >;
 
-export type DropdownEndAdornmentProps<T> = Pick<
+export type AdornmentProps<T> = Pick<
   DropdownProps<T>,
-  'trailingIcon'
->;
-
-export type DropdownStartAdornmentProps<T> = Pick<
-  DropdownProps<T>,
-  'leadingIcon'
->;
+  'trailingIcon' | 'leadingIcon'
+> & {
+  icon: React.ReactNode;
+};
 
 export type DropdownTriggerProps<T> = Pick<
   DropdownProps<T>,
@@ -110,10 +107,7 @@ export type DropdownTriggerProps<T> = Pick<
   | 'leadingIcon'
   | 'trailingIcon'
   | 'renderTrigger'
-> & {
-  open: boolean;
-  onPress: () => void;
-};
+>;
 
 export type DropdownHelperTextProps<T> = Pick<
   DropdownProps<T>,

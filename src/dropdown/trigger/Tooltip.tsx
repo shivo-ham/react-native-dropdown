@@ -1,5 +1,5 @@
-import type { DropdownTooltipProps } from '@/dropdown/Dropdown.types';
 import { Text, View } from 'react-native';
+import type { DropdownTooltipProps } from '../Dropdown.types';
 
 const DropdownTooltip = <T,>({ toolTipMessage }: DropdownTooltipProps<T>) => {
   return (
